@@ -3,9 +3,12 @@ const Decompress = require("./commands/decomress");
 const Str = require("./commands/string");
 const API = require("./commands/api");
 
-const arg = process.argv.splice(2);
+// Extracting the Third Argument frmo Terminal
+const arg = process.argv.splice(2); // It can return all the arguments after 2 position like [3,4,5...]
 
+// Validating First Operation where arg[0] means it return third argument from command
 switch (arg[0]) {
+  // operations
   case "compress":
     Compress.compressFile(arg[1]);
     break;
@@ -18,6 +21,8 @@ switch (arg[0]) {
   case "api":
     API.fetchData();
     break;
+
+  // when Operation not matched
   default:
     console.log("unknown Operation.");
     break;

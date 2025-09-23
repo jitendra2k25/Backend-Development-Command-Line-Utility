@@ -1,11 +1,16 @@
 import chalk from "chalk";
 export const strOperations = (arg) => {
-  const stringArg = arg.splice(1);
+  // all command line attributes from index 3
+  const stringArg = arg.splice(1); // return a array
+
+  // second element from array
   const text = stringArg[1];
+  // verifying user entered operation
   if (!stringArg[0]) {
     console.log("String Operation Required");
     return;
   }
+  // first element from array or operations
   switch (stringArg[0].toLowerCase()) {
     case "uppercase":
       console.log(chalk.cyanBright(text.toUpperCase()));
@@ -14,6 +19,7 @@ export const strOperations = (arg) => {
       console.log(chalk.cyanBright(text.toLowerCase()));
       break;
     case "words":
+      // splitting the string by splace
       const words = text.trim().split(/\s+/);
       console.log(chalk.cyanBright(words.length));
       break;
