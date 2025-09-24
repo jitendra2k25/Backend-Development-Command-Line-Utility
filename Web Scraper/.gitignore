@@ -1,6 +1,19 @@
-# Logs
-logs
-*.log
-
-# Dependency directories
+# Node.js
 node_modules/
+
+# Build artifacts
+dist/
+build/
+
+# Environment variables
+.env
+
+# IDE and OS files
+.vscode/
+.idea/
+
+# Other
+temp/
+tmp/
+log/
+*.log
